@@ -23,6 +23,10 @@
 class Otto
 {
   public:
+    int const LeftLeg = 0;
+    int const RightLeg = 1;
+    int const LeftFoot = 2;
+    int const RightFoot = 3;
 
     //-- Otto initialization
     void init(Adafruit_PWMServoDriver pwm, int YL, int YR, int RL, int RR, int Buzzer);

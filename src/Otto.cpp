@@ -7,13 +7,13 @@
 #include "Otto.h"
 #include <Oscillator.h>
 
-void Otto::init(Adafruit_PWMServoDriver pwmDriver, int YL, int YR, int RL, int RR, int Buzzer) {
+void Otto::init(Adafruit_PWMServoDriver pwmDriver, int leftLeg, int rightLeg, int leftFoot, int rightFoot, int Buzzer) {
   pwm = pwmDriver;
 
-  servo_pins[0] = YL;
-  servo_pins[1] = YR;
-  servo_pins[2] = RL;
-  servo_pins[3] = RR;
+  servo_pins[LeftLeg] = leftLeg;
+  servo_pins[RightLeg] = rightLeg;
+  servo_pins[LeftFoot] = leftFoot;
+  servo_pins[RightFoot] = rightFoot;
 
   attachServos();
   isOttoResting=false;
